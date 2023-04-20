@@ -8,19 +8,14 @@ const names = [];
 
 // 이름 추가 버튼 클릭 시
 addBtn.addEventListener('click', () => {
-  const name = nameInput.value;
-  if (name) {
-    names.push(name);
-    nameInput.value = '';
-    renderNames();
-  }
+  addName();
 });
 
 // 엔터 키 입력 시
-nameInput.addEventListener('keydown', (event) => {
+nameInput.addEventListener('keypress', (event) => {
   if (event.key === 'Enter') {
     event.preventDefault();
-    addBtn.click();
+    addName();
   }
 });
 
@@ -43,6 +38,16 @@ function renderNames() {
     li.textContent = name;
     nameList.appendChild(li);
   });
+}
+
+// 이름 추가 함수
+function addName() {
+  const name = nameInput.value.trim(); // 이름 양쪽 공백 제거
+  if (name) {
+    names.push(name);
+    nameInput.value = '';
+    renderNames();
+  }
 }
 
 // 배열 무작위 섞기
