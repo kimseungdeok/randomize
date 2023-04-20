@@ -1,34 +1,48 @@
-// 발표자 배열 초기화
-var presenters = ['발표자1', '발표자2', '발표자3'];
+const nameInput = document.getElementById('name');
+const addBtn = document.getElementById('add-btn');
+const nameList = document.getElementById('list');
+const orderBtn = document.getElementById('order-btn');
+const result = document.getElementById('result');
 
-// 발표자 추가 버튼 클릭 시 발표자 배열에 추가하는 함수
-document.getElementById('btn-add-presenter').addEventListener('click', function() {
-    var newPresenter = document.getElementById('input-presenter').value;
-    if (newPresenter !== '') {
-        presenters.push(newPresenter);
-        document.getElementById('input-presenter').value = '';
-        updateResult();
-    }
+const names = [];
+
+// 이름 추가 버튼 클릭 시
+addBtn.addEventListener('click', () => {
+  const name = nameInput.value;
+  if (name) {
+    names.push(name);
+    nameInput.value = '';
+    renderNames();
+  }
 });
 
-// 발표자 제거 버튼 클릭 시 발표자 배열에서 마지막 발표자를 제거하는 함수
-document.getElementById('btn-remove-presenter').addEventListener('click', function() {
-    presenters.pop();
-    updateResult();
+// 순서 정하기 버튼 클릭 시
+orderBtn.addEventListener('click', () => {
+  if (names.length < 2) {
+    alert('2명 이상의 참여자가 필요합니다.');
+  } else {
+    const shuffledNames = shuffleArray(names);
+    result.textContent = '순서가 정해졌습니다: ' + shuffledNames.join(', ');
+    result.style.display = 'block';
+  }
 });
 
-// 발표 순서를 정하는 함수
-function determinePresentationOrder() {
-    // 발표 순서를 랜덤으로 섞기
-    presenters.sort(function(a, b){return 0.5 - Math.random()});
-    updateResult();
+// 참여자 목록 렌더링
+function renderNames() {
+  nameList.innerHTML = '';
+  names.forEach(name => {
+    const li = document.createElement('li');
+    li.textContent = name;
+    nameList.appendChild(li);
+  });
 }
 
-// 결과를 표시하는 함수
-function updateResult() {
-    // 결과를 표시할 div 요소 가져오기
-    var resultDiv = document.getElementById('result');
-
-    // 발표 순서를 결과 div에 표시
-    resultDiv.innerHTML = '발표 순서: ' + presenters.join(', ');
+// 배열 무작위 섞기
+function shuffleArray(array) {
+  const shuffled = array.slice();
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
 }
