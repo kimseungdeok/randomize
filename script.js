@@ -16,6 +16,14 @@ addBtn.addEventListener('click', () => {
   }
 });
 
+// 엔터 키 입력 시
+nameInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    addBtn.click();
+  }
+});
+
 // 순서 정하기 버튼 클릭 시
 orderBtn.addEventListener('click', () => {
   if (names.length < 2) {
