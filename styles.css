@@ -134,3 +134,10 @@ li {
 #reset-btn:hover {
     background-color: #c82333; /* 버튼의 호버 배경색 */
 }
+
+#btn-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
