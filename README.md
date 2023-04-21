@@ -22,8 +22,7 @@
 2. Repeat step 1 to add more names to the list.
 3. Click the "순서 정하기" button to randomize the order of the participant list.
 4. The randomized order will be displayed in the "참여자 목록" section.
-5. To remove a name from the participant list, click the "X" button next to the name.
-6. The application is responsive and can be used on various devices.
+
 
 ## License
 
