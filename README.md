@@ -7,8 +7,6 @@
 -   Add names to the participant list
 -   Remove names from the participant list
 -   Randomize the order of the participant list
--   Responsive design with CSS styling
--   Use of CSS gradient for title styling
 
 ## Technologies Used
 
