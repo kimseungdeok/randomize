@@ -25,12 +25,7 @@ h1 {
     transition: color 0.3s ease-in-out;
 }
 
-/* 랜덤 색상에 호버 효과 클래스 추가 */
-.randomize span:hover {
-    background: linear-gradient(to right, #ff0000, #0000ff); /* 그라디언트 색상 설정 */
-    -webkit-background-clip: text; /* 텍스트만 그라디언트 적용 */
-    color: transparent; /* 텍스트 색상을 투명하게 설정하여 그라디언트 효과를 보이게 함 */
-}
+
 h2 {
     text-align: center;
     font-size: 32px;
@@ -92,11 +87,7 @@ li {
     padding-left: 10px;
     
 }
-.chip:hover{
-    background: linear-gradient(to right, #ff0000, #0000ff); /* 그라디언트 색상 설정 */
-    -webkit-background-clip: text; /* 텍스트만 그라디언트 적용 */
-     color: transparent; /* 텍스트 색상을 투명하게 설정하여 그라디언트 효과를 보이게 함 */
-}
+
 
 /* 추가 버튼 스타일 */
 #add-btn {
