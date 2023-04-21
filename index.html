@@ -5,7 +5,7 @@
         <link rel="stylesheet" type="text/css" href="styles.css" />
     </head>
     <body>
-        <h1>Randomize</h1>
+        <h1 class="randomize"><span>Randomize</span></h1>
         <div id="name-input">
             <label for="name"></label>
             <input type="text" id="name" name="name" />
@@ -13,9 +13,13 @@
         </div>
         <div id="name-list">
             <h2>참여자 목록</h2>
-            <ul id="list"></ul>
+            <ul id="list">
+                <li style="visibility: hidden;">1</li>
+            </ul>
             <button id="order-btn">순서 정하기</button>
-            <div id="result" style="display: none"></div>
+            <div id="result" style="visibility: hidden;">
+                <div class="chip" style="visibility: hidden;">1</div>
+            </div>
         </div>
         <script src="script.js"></script>
     </body>

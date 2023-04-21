@@ -26,7 +26,7 @@ orderBtn.addEventListener('click', () => {
   } else {
     const shuffledNames = shuffleArray(names);
     result.textContent = '순서가 정해졌습니다:';
-    result.style.display = 'block';
+    result.style.visibility = 'visible';
     renderChips(shuffledNames);
   }
 });

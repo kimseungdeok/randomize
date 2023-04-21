@@ -16,7 +16,20 @@ body {
 h1 {
     text-align: center;
     font-size: 80px;
-    font-weight: 800;
+    font-weight: 500;
+}
+
+/* 랜덤 색상 클래스 추가 */
+.randomize span {
+    color: #000;
+    transition: color 0.3s ease-in-out;
+}
+
+/* 랜덤 색상에 호버 효과 클래스 추가 */
+.randomize span:hover {
+    background: linear-gradient(to right, #ff0000, #0000ff); /* 그라디언트 색상 설정 */
+    -webkit-background-clip: text; /* 텍스트만 그라디언트 적용 */
+    color: transparent; /* 텍스트 색상을 투명하게 설정하여 그라디언트 효과를 보이게 함 */
 }
 h2 {
     text-align: center;
@@ -24,7 +37,7 @@ h2 {
     font-weight: 400;
 }
 #name {
-    width: 500px;
+    width: 800px;
     height: 48px;
     font-size: 18px;
     padding: 8px;
@@ -74,9 +87,15 @@ li {
     color: #fff;
     font-size: 1.2rem;
     border-radius: 16px;
-    margin-right: 10px;
+    margin: 5px;
     padding-right: 10px;
     padding-left: 10px;
+    
+}
+.chip:hover{
+    background: linear-gradient(to right, #ff0000, #0000ff); /* 그라디언트 색상 설정 */
+    -webkit-background-clip: text; /* 텍스트만 그라디언트 적용 */
+     color: transparent; /* 텍스트 색상을 투명하게 설정하여 그라디언트 효과를 보이게 함 */
 }
 
 /* 추가 버튼 스타일 */
