@@ -2,9 +2,10 @@ const nameInput = document.getElementById('name');
 const addBtn = document.getElementById('add-btn');
 const nameList = document.getElementById('list');
 const orderBtn = document.getElementById('order-btn');
+const resetBtn = document.getElementById('reset-btn'); // Reset 버튼 추가
 const result = document.getElementById('result');
 
-const names = [];
+let names = []; // let으로 변경하여 배열 재할당 가능하도록 변경
 
 // 이름 추가 버튼 클릭 시
 addBtn.addEventListener('click', () => {
@@ -29,6 +30,11 @@ orderBtn.addEventListener('click', () => {
     result.style.visibility = 'visible';
     renderChips(shuffledNames);
   }
+});
+
+// Reset 버튼 클릭 시
+resetBtn.addEventListener('click', () => {
+    resetParticipants();
 });
 
 // 참여자 목록 렌더링
@@ -70,4 +76,12 @@ function renderChips(names) {
     chip.textContent = name;
     result.appendChild(chip);
   });
+}
+
+// 참여자 초기화 함수
+function resetParticipants() {
+    names = []; // 배열 초기화
+    renderNames(); // 참여자 목록 렌더링
+    nameList.innerHTML = `<li style="visibility: hidden;">1</li>`;
+    result.style.visibility = 'hidden'; // 결과 영역 숨김
 }
