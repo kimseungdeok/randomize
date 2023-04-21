@@ -4,9 +4,10 @@
 
 ## Features
 
--   Add names to the participant list
--   Remove names from the participant list
--   Randomize the order of the participant list
+- Users can add participants to the list by entering their names.
+- The participant list is displayed in the order they are added, and can be reset by clicking the "Reset" button.
+- Clicking the "Randomize" button shuffles the participant list randomly.
+- The shuffled participant list is displayed one by one in the result area.
 
 ## Technologies Used
 
@@ -16,10 +17,11 @@
 
 ## Usage
 
-1. Enter a name in the input field under "이름 입력" and click the "추가" button to add the name to the participant list.
+1. Enter a name in the input field and click the "Add" button to add the name to the participant list.
 2. Repeat step 1 to add more names to the list.
-3. Click the "순서 정하기" button to randomize the order of the participant list.
-4. The randomized order will be displayed in the "참여자 목록" section.
+3. Click the "Randomize" button to randomize the order of the participant list.
+4. The randomized order will be displayed under the "Randomize" button
+5. You can reset participant list when you click "Reset" button
 
 ## License
 
