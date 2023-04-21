@@ -1,20 +1,20 @@
 # Randomize
 
-[Randomize](kimseungdeok.github.io/randomize/) is a simple web application that allows you to randomize a list of names.
+[Randomize](https://kimseungdeok.github.io/randomize/) is a simple web application that allows you to randomize a list of names.
 
 ## Features
 
-- Add names to the participant list
-- Remove names from the participant list
-- Randomize the order of the participant list
-- Responsive design with CSS styling
-- Use of CSS gradient for title styling
+-   Add names to the participant list
+-   Remove names from the participant list
+-   Randomize the order of the participant list
+-   Responsive design with CSS styling
+-   Use of CSS gradient for title styling
 
 ## Technologies Used
 
-- HTML5
-- CSS3
-- JavaScript
+-   HTML5
+-   CSS3
+-   JavaScript
 
 ## Usage
 
@@ -23,7 +23,6 @@
 3. Click the "순서 정하기" button to randomize the order of the participant list.
 4. The randomized order will be displayed in the "참여자 목록" section.
 
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
@@ -31,5 +30,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Contributing
 
 If you would like to contribute to this project, please open an issue or submit a pull request.
-
-
