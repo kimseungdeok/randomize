@@ -25,8 +25,9 @@ orderBtn.addEventListener('click', () => {
     alert('2명 이상의 참여자가 필요합니다.');
   } else {
     const shuffledNames = shuffleArray(names);
-    result.textContent = '순서가 정해졌습니다: ' + shuffledNames.join(', ');
+    result.textContent = '순서가 정해졌습니다:';
     result.style.display = 'block';
+    renderChips(shuffledNames);
   }
 });
 
@@ -58,4 +59,15 @@ function shuffleArray(array) {
     [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
   }
   return shuffled;
+}
+
+// Chips로 보여주기
+function renderChips(names) {
+  result.innerHTML = '';
+  names.forEach(name => {
+    const chip = document.createElement('div');
+    chip.classList.add('chip');
+    chip.textContent = name;
+    result.appendChild(chip);
+  });
 }

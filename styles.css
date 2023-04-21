@@ -7,16 +7,33 @@ body {
         "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-h1,
+h1 {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 800;
+}
 h2 {
     text-align: center;
+    font-size: 32px;
+    font-weight: 400;
 }
-
+#name {
+    width: 500px;
+    height: 48px;
+    font-size: 18px;
+    padding: 8px;
+}
 #name-input {
     text-align: center;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
 }
 
 #name-list {
@@ -31,9 +48,63 @@ ul {
 li {
     display: inline-block;
     margin: 5px;
-    
+    background-color: #e0e0e0;
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 16px;
+    font-size: 1.2rem;
 }
 
 #order-btn {
     margin-top: 10px;
+}
+
+#result {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Chips 스타일 */
+.chip {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 16px;
+    margin-right: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/* 추가 버튼 스타일 */
+#add-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+
+    border-radius: 0px 5px 5px 0px;
+
+}
+
+/* 순서 정하기 버튼 스타일 */
+#order-btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 16px;
+    border-radius: 16px;
+}
+
+/* 버튼 호버 효과 */
+#add-btn:hover, #order-btn:hover {
+    background-color: #0056b3;
 }
